@@ -1,0 +1,7 @@
+out/
+*.class
+.idea/
+*.iml
+productos.csv
+vendedores.csv
+vendedor_*.csv
