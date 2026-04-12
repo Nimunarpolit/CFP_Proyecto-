@@ -4,8 +4,8 @@ import java.util.Random;
 public class GenerateInfoFiles {
 
     // Arrays con datos de prueba para generar información aleatoria
-    private static final String[] NOMBRES = {"Carlos", "Ana", "Luis", "Maria", "Juan"};
-    private static final String[] APELLIDOS = {"Gomez", "Perez", "Rodriguez", "Martinez"};
+    private static final String[] NOMBRES = {"Nicolas", "Ana", "Luis", "Maria", "Juan"};
+    private static final String[] APELLIDOS = {"Munar", "Perez", "Rodriguez", "Martinez"};
     private static final String[] TIPOS_DOC = {"CC", "CE", "TI"};
     private static final String[] PRODUCTOS_NOMBRES = {"Laptop", "Mouse", "Teclado", "Monitor"};
     private static final double[] PRODUCTOS_PRECIOS = {2500000.50, 80000.00, 150000.99, 950000.00};
