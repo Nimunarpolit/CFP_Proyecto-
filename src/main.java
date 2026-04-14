@@ -94,17 +94,41 @@ public class main {
                 return;
             }
 
-            for (int i = 1; i < lineas.size(); i++) {
 
-                String[] datos = lineas.get(i).split(";");
-                Producto producto = prods.get(datos[0]);
-                int cantidad = Integer.parseInt(datos[1]);
+           for (int i = 1; i < lineas.size(); i++) {
+    String linea = lineas.get(i).trim();
+    if (linea.isEmpty()) continue;
 
-                if (producto != null) {
-                    vendedor.ventasTotales += producto.precio * cantidad;
-                    producto.cantidadVendida += cantidad;
-                }
-            }
+    String[] datos = linea.split(";");
+    if (datos.length < 2) {
+        System.err.println("  [AVISO] " + archivo.getFileName() + " línea " + (i+1) + ": formato incorrecto, se omite.");
+        continue;
+    }
+
+    String idProducto = datos[0].trim();
+    Producto producto = prods.get(idProducto);
+
+    if (producto == null) {
+        System.err.println("  [AVISO] " + archivo.getFileName() + " línea " + (i+1) + ": ID de producto '" + idProducto + "' no existe en el catálogo.");
+        continue;
+    }
+
+    int cantidad;
+    try {
+        cantidad = Integer.parseInt(datos[1].trim());
+    } catch (NumberFormatException e) {
+        System.err.println("  [AVISO] " + archivo.getFileName() + " línea " + (i+1) + ": cantidad no numérica '" + datos[1] + "'.");
+        continue;
+    }
+
+    if (cantidad <= 0) {
+        System.err.println("  [AVISO] " + archivo.getFileName() + " línea " + (i+1) + ": cantidad no positiva (" + cantidad + ").");
+        continue;
+    }
+
+    vendedor.ventasTotales += producto.precio * cantidad;
+    producto.cantidadVendida += cantidad;
+} 
 
         } catch (Exception e) {
             System.err.println("ADVERTENCIA: " + archivo.getFileName());
