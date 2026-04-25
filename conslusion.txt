@@ -1,0 +1,16 @@
+CONCLUSIONES
+
+-  Durante el desarrollo de este proyecto aprendimos a trabajar de manera más ordenada con archivos en Java, especialmente en la lectura, escritura y
+   procesamiento de información almacenada en archivos CSV. También reforzamos el uso de estructuras como Map para organizar los datos de productos y
+   vendedores, lo cual facilitó la búsqueda de información y el cálculo de los reportes finales. Además, comprendimos la importancia de validar los
+   datos antes de procesarlos, ya que esto ayuda a prevenir errores y a hacer que el programa sea más confiable.
+
+- En cuanto a su aplicación en la vida profesional, este proyecto nos permitió acercarnos a situaciones muy reales del desarrollo de software, donde
+  con frecuencia es necesario leer archivos, clasificar información, generar reportes y validar datos antes de usarlos. Estas destrezas pueden ser
+  útiles en contextos administrativos, empresariales y tecnológicos, por ejemplo en sistemas de inventario, ventas, nómina o control de registros, donde el manejo correcto de la información es fundamental.
+
+- Entre las dificultades presentadas durante el desarrollo del proyecto, una de las principales fue comprender con claridad la lógica completa del
+  enunciado y traducirla a una solución funcional en Java. También hubo retos al momento de organizar la información de varios archivos, mantener
+  coherencia entre los datos generados y validar que los reportes quedaran realmente ordenados según lo solicitado. Finalmente, otra dificultad
+  importante fue ajustar el trabajo a los criterios académicos de la guía, procurando que el proyecto no solo funcionara, sino que además estuviera
+  bien presentado, documentado y explicado.
