@@ -161,6 +161,7 @@ public class main {
             java.util.function.Function<T, String> getKey) throws IOException {
 
         return Files.lines(Paths.get(archivo))
+                .filter(linea -> !linea.trim().isEmpty())
                 .map(constructor)
                 .collect(Collectors.toMap(getKey, item -> item));
     }
@@ -272,7 +273,7 @@ public class main {
 
         try (PrintWriter writer = new PrintWriter("reporte_productos.csv")) {
             for (Producto producto : productosOrdenados) {
-                writer.printf("%s;%.2f%n", producto.nombre, producto.precio);
+                writer.printf("%s;%.2f;%d%n", producto.nombre, producto.precio, producto.cantidadVendida);
             }
         }
     }
